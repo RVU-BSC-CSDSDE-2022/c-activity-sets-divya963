@@ -12,7 +12,7 @@ int main()
   result = add(num1,num2);  //formal argumrnts
   output(num1,num2,result);
   return 0;
-}
+}  
 
 int input()
 {
