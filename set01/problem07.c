@@ -1,3 +1,4 @@
+/*sum of n numbers*/
 #include<stdio.h>
 int input_n();
 int sum_n_nos(int n);
@@ -16,7 +17,8 @@ int input_n(){
     return n;
 }
 int sum_n_nos(int n){
-    int sum=0,i=0;//i = 1
+    int sum=0,i=0;/*i = 1 both i=0 and i=1 will produce same answer while initializing value of 0 it 
+    calculates from 0,1,2,.. upto 10 ,if we are initializing value of 1 it calculates from 1,2,...10*/
     for(i;i<=n;i++){
         sum = sum + i;
     }

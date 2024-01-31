@@ -7,3 +7,5 @@ int main(){
   printf("%d + %d = %d",a,b,sum);
   return 0;//whether the problem is completed successfully or not.
 }
+
+    

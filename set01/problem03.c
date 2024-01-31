@@ -1,3 +1,5 @@
+/*call by value orginal value is not modified different memory location are taken for actual and formal 
+parameters,passing value of the variable*/
 #include<stdio.h>
 
 int input();

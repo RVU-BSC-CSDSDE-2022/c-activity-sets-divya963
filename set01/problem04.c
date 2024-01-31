@@ -1,3 +1,4 @@
+/*Call by reference : the orginal value is modified and the address is passed*/
 #include<stdio.h>
 
 void input(int *a, int *b);

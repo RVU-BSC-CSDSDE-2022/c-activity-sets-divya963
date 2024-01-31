@@ -1,4 +1,5 @@
-
+/*we need to compare three numbers a ,b, and c,  largest can be used to print result. 
+here compare a nd b then compare a and c then compare b and c we will get output largest number */
 #include<stdio.h>
 int input();
 int compare(int a, int b, int c);
