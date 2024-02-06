@@ -28,12 +28,26 @@
     hello and hello come out of loop what will be the value of i,,here i is printing again and
      again it is not coming out of the loop,what to do to stop the iteration,apply condition*/
         int i=0,result = 0;
-         while (string1[i] == string2[i] && (string1[i]!='\0' && string2[i]!='\0'))
-        /*while (string1[i] == string2[i] && string1[i]!='\0' || string2[i]!='\0') even i am using || in the place of && and vice versa the loop is continueing*/
-        /*given condition for termination(null value) to come out ,\0 is used to come out it is the last 
-        character in string.*/
-        /*while giving || operator ./axe is not working debugging getting  result No symbol table is loaded. 
-         Use the "file" command., no executables specified.*/
+         //while (string1[i] == string2[i] && (string1[i]!='\0' && string2[i]!='\0'))
+         while (string1[i] == string2[i] && (string1[i]!='\0'))
+
+
+ /*(string1[i] == string2[i]) this condition checks both index of string1[0] is equal to string2[0] the 
+ iteretion will continue until the given values are not equal.
+  If the loop completes without encountering any unequal pairs, it suggests that the entire strings are 
+  equal up to the length of the shorter string.that's why we need to add one condition to check null 
+  character
+  (string1[i] != string2[i]) this condition checks both index of string1[0] and string2[0] are not equal the
+  iteration will continue if string1[1] is not equal to string2[1] the loop will execute until index values 
+  become equal.(This is completely dumb)
+  (string1[i]!='\0' && string2[i]!='\0')This checks if both strings have not reached their null ('\0').
+  The characters at the current position in both strings are equal.
+Neither of the strings has reached its null terminator.*/
+/*while (string1[i] == string2[i] && string1[i]!='\0' || string2[i]!='\0') even i am using || in the place of && and vice versa the loop is continueing*/
+/*given condition for termination(null value) to come out ,\0 is used to come out it is the last 
+character in string.*/
+/*while giving || operator ./axe is not working debugging getting  result No symbol table is loaded. 
+Use the "file" command., no executables specified.*/
           {
            i++;// this block represent the exection as long as the string1[i] and string2[i] are equal
           }
@@ -41,12 +55,12 @@
         while(string1[i] > string2[i])
          {
           result = 1;
-          break;
+          break;//the loop will execute only once
          }
         while(string1[i] < string2[i])
          {
             result = -1;
-            break;
+            break;//the loop will execute only once if we find result no need to execute twice
          }
         return result;
   }

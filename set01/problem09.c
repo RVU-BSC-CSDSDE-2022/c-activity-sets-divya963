@@ -1,4 +1,6 @@
+/*babylonian square root*/
 #include<stdio.h>
+#include<math.h>
 float input();
 float square_root(float n);
 void output(float n, float sqrroot);
@@ -20,17 +22,18 @@ float input()
 }
 float square_root(float n)
 {
-  float x = n;
-  float y = 1;
-  float e = 0.000001;
-  while(x-y>e)
-    {
-      x = (x+y)/2;
-      y = n/x;
-    }
-  return x;
+  float x = 0.1;
+  float xn;
+  do{
+    xn = 0.5 * (x + n /x) ;
+    x = xn;
+  } while((xn * xn - n) > 0.00001);
+  return xn; 
 }
 void output(float n, float sqrroot)
 {
-  printf("The square root is %f",sqrroot);
+  printf("The square root %f is %f",n,sqrroot);
 }
+
+
+  
