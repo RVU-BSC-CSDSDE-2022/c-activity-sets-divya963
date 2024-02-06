@@ -24,8 +24,12 @@
   int stringcompare(char *string1, char *string2) 
   {
     int i,result =0;
-    for(i=0;string1[1] == string2[2] && string2[i]!='\0';i++)
-      {
+    for(i=0;string1[i] == string2[i] && string2[i]!='\0';i++);
+    /*for(i=0;string1[i] == string2[i] && string2[i]!='\0';i++) showing result hello=Hello. the code is wrong.
+    for writing a for loop we need to add for(){statement} or even if we areyou are not adding statemnent 
+    add ; for(); like this
+    */
+      
         while(string1[i]>string2[i])
           {
             result = 1;
@@ -36,7 +40,7 @@
             result = -1;
             break;
           }
-      }
+      
     return result;
 }
   void output(char *string1, char *string2, int result)

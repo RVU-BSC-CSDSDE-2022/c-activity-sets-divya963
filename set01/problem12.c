@@ -3,6 +3,7 @@
 struct _complex {
   float real,imaginary;
 };
+
 typedef struct _complex Complex;
 
 int get_n();
