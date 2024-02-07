@@ -125,7 +125,9 @@ The Camel is Happy
 
 5.  Write a program to find borga(x) given x.
 
-> The formula for finding borga(x) is `1 + (x^1)/3! + (x^2)/5! + (x^3)/7! + ...`. Stop when the next term is less 0.000001 using four functions.
+> The formula for finding borga(x) is `1 + (x^1)/3! + (x^2)/5! + (x^3)/7! + ...`. Stop when the next term is 
+less 0.000001 using four functions.
+
 
 ```c
 int input(int x);
