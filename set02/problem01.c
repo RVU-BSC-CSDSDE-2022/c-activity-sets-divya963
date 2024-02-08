@@ -30,8 +30,9 @@ Point input()
 }
 void dist(Point a, Point b, float *res)
 {
-  *res = sqrt((b.x - a.x) * (b.x - a.x) + (b.y - a.y) * (b.y - a.y));
- //*res = sqrt(pow((b.x-a.x),2) + pow((b.y-a.y),2));
+  *res = sqrt(pow((b.x-a.x),2) + pow((b.y-a.y),2));
+  //*res = sqrt((b.x - a.x) * (b.x - a.x) + (b.y - a.y) * (b.y - a.y)); without using pow function.
+  //*res = (pow((b.x - a.x),2) + pow((b.y - a.y),2))*.5; without using sqrt
 }
 void output(Point a, Point b, float res)
 {
