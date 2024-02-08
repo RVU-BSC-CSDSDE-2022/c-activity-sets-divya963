@@ -29,7 +29,8 @@ Camel input()
 }
 float find_weight(Camel c)
 {
-  c.weight= pi*pow(c.radius,3)*sqrt(c.height*c.length);
+  
+  c.weight = pi * (pow(c.radius,3)) * sqrt(c.height * c.length);
   return c.weight;
 }
 void output(Camel c)
