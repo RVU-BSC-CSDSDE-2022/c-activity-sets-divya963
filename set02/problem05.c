@@ -19,40 +19,27 @@ int main(){
 
 int input(int x)
 {
-    printf("Enter the value of x");
-    scanf("%d",x);
+    printf("Enter the value of x : ");
+    scanf("%d",&x);
     return x;
 }
 float borga_X(int x)
 {
-    int result = 0,power;
-    
-    for(int n=1;n<=10;n++)
-    { //iteration for finding power of x
-    power = pow(x,n);
-    }
-    for(int i=0;i<=10;i+1)//to getting odd numbers 
-    {
-        continue the multiplication(3*2*1)
-        factorial *=j;
-    }
-    result = 1 + power/factorial
-    
-    if (result < 0.000001) 
-    {
-        break;
-    }
+    int factorial = 1;
+    int power = 1;
+    float term = 1.0;
+    float sum = 1.0;
+    int i = 1;
+    while(term >0.000001){
+        factorial *= (2 * i) * (2 * i + 1);
+        power = x*x;
+        term = (float)power/factorial;
+        sum = sum + term;//1+...
+        i++;
+    } 
+    return sum;
 }
 void output(int x, float result)
 {
-    printf("The borga value of %d is : %d ",x,result);
+    printf("The borga value of %d is : %f ",x,result);
 }  
-
-  /* finding power of x,x is a user input and power is increased
-    for(j=0;j<=n;j++)
-    factorial finding
-    initialize 3 and the next number should be odd 
-    for(i=3;i<=n;i+1)
-    if the answer < 0.000001 it comes out and print result whether the condition 
-    is false satisfies iteration continuoes
-    (x^n/f!) if the answer is >0.000001 continue*/
