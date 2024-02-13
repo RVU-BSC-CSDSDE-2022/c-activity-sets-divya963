@@ -110,7 +110,7 @@ float calculate_power_and_factorial(int n, int x, int y)
 /*x need to be user input ,the power of x need to set 1(iteration 1,2,3,...)(y need to be incremented), 
 factorial of number set to 3(iteration 3,5,7,8,...)*/
 
-#include<stdio.h>
+/*#include<stdio.h>
 
 int main() {
     int  x;
@@ -132,31 +132,41 @@ int main() {
 
     return sum;
 }*/
-    int result;
-    int factorial = 1;
-    int power = 1;
-    int n =0;
-    
-    for (int i = 1; i <= n; i++) {
-        factorial *= (2 * i - 1) * (2 * i); // Calculate factorial: 3!, 5!, 7!, ...
-        power *= x; // Calculate x^i
-        result += (float)power / factorial; // Add the term to the result
-    }
 
-    printf("Result: %.2f\n", result);
-    
+#include <stdio.h>
+
+int input();
+float borga_X(int x);
+void output(int x, float result);
+
+int main() {
+    int x = input();
+    float result = borga_X(x);
+    output(x, result);
     return 0;
 }
 
+int input() {
+    int x;
+    printf("Enter the value of x: ");
+    scanf("%d", &x);
+    return x;
+}
 
+float borga_X(int x) {
+    float borga = 1.0;
+    float term = 1.0;
 
+    for (int n = 1; term >= 0.000001; n++) {
+        term *= (float)x / (2 * n * (2 * n + 1));
+        borga += term;
+    }
 
+    return borga;
+}
 
+void output(int x, float result) {
+    printf("borga(%d) = %.6f\n", x, result);
+}
 
-
-
-
-
-
-    
 

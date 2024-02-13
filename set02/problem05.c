@@ -1,6 +1,3 @@
-/*The formula for finding borga(x) is `1 + (x^1)/3! + (x^2)/5! + (x^3)/7! + ...`. Stop when the next term is 
-less 0.000001 using four functions.*/
-
 #include<stdio.h>
 #include<math.h>
 
@@ -11,7 +8,7 @@ void output(int x, float result);
 int main(){
     int x;
     float result;
-    input(x);
+    x = input();
     result = borga_X(x);
     output(x,result);
     return 0;
@@ -25,18 +22,15 @@ int input(int x)
 }
 float borga_X(int x)
 {
-    int factorial = 1;
-    int power = 1;
     float term = 1.0;
     float sum = 1.0;
-    int i = 1;
-    while(term >0.000001){
-        factorial *= (2 * i) * (2 * i + 1);
-        power = x*x;
-        term = (float)power/factorial;
-        sum = sum + term;//1+...
-        i++;
-    } 
+      
+    for(int i=1;sum<0.000001;i++)//for loop to find 1+x^1/3.. if the sum less than 0.000001 it exit 
+    {
+        find factorial
+        find square root
+        calculate factorial/squareroot sum is already fixed as 1 so 1 will add 
+    }
     return sum;
 }
 void output(int x, float result)
