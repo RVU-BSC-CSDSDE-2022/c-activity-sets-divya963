@@ -133,7 +133,7 @@ int main() {
     return sum;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int input();
 float borga_X(int x);
@@ -168,5 +168,5 @@ float borga_X(int x) {
 void output(int x, float result) {
     printf("borga(%d) = %.6f\n", x, result);
 }
-
+*/
 

@@ -22,19 +22,32 @@ int input(int x)
 }
 float borga_X(int x)
 {
-    float term = 1.0;
-    float sum = 1.0;
-    int power ,factorial;
-      
-    for(int i=1;sum<0.000001;i++)/*for loop to find 1+x^1/3.. if the sum less than 0.000001 it exit ,increment 
-    i in each iteration*/
-    {
-        factorial *= (2*i) * (2*i+1);//find factorial
-        power *= pow(x,i);//find square root
-        term = power/factorial;//calculate factorial/squareroot sum is already fixed as 1 so 1 will add 
-        sum = sum + term;
-    }
-    return sum;
+    { 
+        float power=1; 
+        float factorial =1; 
+        float sum=1; 
+        int i=1; 
+        int j=1; 
+        while (i>0)
+        {  
+            for (j=1;j<=((2*i)+1);j++)
+            { 
+                factorial *= j; 
+            } 
+            power=power*x; 
+            if ((power/factorial)>0.000001)
+            { 
+                sum=sum+(power/factorial); 
+                i=i+1; 
+            } 
+            else
+            { 
+                break;
+            } 
+        } 
+        
+        return sum; 
+    } 
 }
 void output(int x, float result)
 {
