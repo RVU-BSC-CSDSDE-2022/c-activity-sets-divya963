@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<math.h>
 
 int input();
 float borga_X(int x);
@@ -22,32 +21,29 @@ int input(int x)
 }
 float borga_X(int x)
 {
-    { 
-        float power=1; 
-        float factorial =1; 
-        float sum=1; 
-        int i=1; 
-        int j=1; 
-        while (i>0)
-        {  
-            for (j=1;j<=((2*i)+1);j++)
-            { 
-                factorial *= j; 
-            } 
-            power=power*x; 
-            if ((power/factorial)>0.000001)
-            { 
-                sum=sum+(power/factorial); 
-                i=i+1; 
-            } 
-            else
-            { 
-                break;
-            } 
+    float power = 1;
+    float factorial;
+    float sum = 1;
+    int i =1;
+    while(i>0)
+    {
+        factorial =1;
+        for(int j=1;j<=((2*i+1));j++)
+        {
+            factorial *= j;
+        }
+        power=power*x; 
+        if ((power/factorial)>0.000001)
+        {
+            sum=sum+(power/factorial); 
+            i=i+1; 
+        }
+        else
+        {
+            break;
         } 
-        
-        return sum; 
     } 
+    return sum;  
 }
 void output(int x, float result)
 {
