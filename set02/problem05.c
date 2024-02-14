@@ -22,13 +22,13 @@ int input(int x)
 float borga_X(int x)
 {
     float power = 1;
-    float factorial;
+    float factorial = 1;
     float sum = 1;
     int i =1;
     while(i>0)
     {
         factorial =1;
-        for(int j=1;j<=((2*i+1));j++)
+        for(int j=1;j<=((2*i)+1);j++)
         {
             factorial *= j;
         }
@@ -36,7 +36,7 @@ float borga_X(int x)
         if ((power/factorial)>0.000001)
         {
             sum=sum+(power/factorial); 
-            i=i+1; 
+            i=i+1; // we need to get 5,7... in denominator
         }
         else
         {

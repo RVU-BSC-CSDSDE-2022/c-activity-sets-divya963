@@ -38,7 +38,7 @@ float finding_power_of_x(int x, int y, int fact) {
     float output;
     float sum =1.0;
     float result = 1.0;
-    for (int i = 0; i < x; i++) {
+    for (int i = 1; i <= x; i++) {
         result *= y;
     }
     output = result/fact;

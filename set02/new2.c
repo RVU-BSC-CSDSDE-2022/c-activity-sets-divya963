@@ -1,14 +1,11 @@
 #include <stdio.h>
 
-float finding_power_of_x(int x, int y, int fact);
+
+float finding_power_of_x(int x,int y);
 
 
 int main() {
-    int n, x, y;
-
-    printf("Enter the number to find factorial: ");
-    scanf("%d", &n);
-    int fact = factorial(n);
+    int  x,y;
 
     printf("Enter the base value: ");
     scanf("%d", &y);
@@ -16,9 +13,9 @@ int main() {
     printf("Enter the exponent value: ");
     scanf("%d", &x);
 
-    float result = finding_power_of_x(x, y, fact);
+    float sum = finding_power_of_x(x,y);
 
-    printf("Result: %.2f\n", result);
+    printf("Result: %f\n", sum);
     return 0;
 }
 
@@ -27,24 +24,26 @@ int main() {
 //Adding another function into the program for incrementing factorial and power
 
 
-float finding_power_of_x(int x, int y, int fact) {
-    {
+float finding_power_of_x(int x,int y) {
     int factorial = 1;
-    for (int i = 1; i <= n; i++) {
+    int n =1;
+    for (int i = 1; i <= ((2*n)+1); i++) {//(2*n)+1 we need the first value 3.
+    /*n need to be incremented if (power/factorial) <0.000001 the condition is true*/
         factorial *= i;
     }
+    //return factorial;
     float output;
     float sum =1.0;
-    float result = 1.0;
-    for (int i = 0; i < x; i++) {
-        result *= y;
-    }
-    output = result/fact;
+    float power = 1.0;
+    
+    for(int i=0;i<=x;i++)
+        power *= y;
+    
+    output = power/factorial;
     
     if (output >0.000001)
     {
         sum += output;
-    }
     }
     return sum;
 }

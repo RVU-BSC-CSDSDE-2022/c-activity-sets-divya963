@@ -11,19 +11,19 @@ int main(){
   return 0;  
 }//factorial of a number*/
 
-/*#include<stdio.h>
+#include<stdio.h>
 int main(){
     int x,y,sqr = 1;
     printf("Enter the value");
     scanf("%d",&y);
     printf("Enter the power");
     scanf("%d",&x);
-    for(int i=0;i<x;i++){
+    for(int i=1;i<=x;i++){
         sqr = y * sqr;
     } 
 	printf("Square : %d",sqr); 
 	return 0; 
-} //x^n (finding power of any given value n times)*/
+} //x^n (finding power of any given value n times)
 
 
 
