@@ -21,25 +21,27 @@
     scanf("%s%s",string1,string2);
   }
 
-  int stringcompare(char *string1, char *string2) 
-  {
-    int i,result =0;
-    for(i=0;string1[i] == string2[i] && string2[i]!='\0';i++);
-    /*for(i=0;string1[i] == string2[i] && string2[i]!='\0';i++) showing result hello=Hello. the code is wrong.
+
+    /*because we are not giving a statement for forloop
+    so giving ;.
+    for(i=0;string1[i] == string2[i] && string2[i]!='\0';i++) showing result hello=Hello. the code is wrong.
     for writing a for loop we need to add for(){statement} or even if we areyou are not adding statemnent 
     add ; for(); like this
     */
-      
-        while(string1[i]>string2[i])
+  int stringcompare(char *string1, char *string2) 
+  {
+    int i,result=0;
+    for(i=0;string1[i] == string2[i] && string2[i]!='\0';i++);    
+        
+    if(string1[i]>string2[i])
           {
             result = 1;
-            break;
           }
-        while(string1[i]<string2[i])
+        else if (string1[i]<string2[i])
           {
             result = -1;
-            break;
-          }
+           }
+       
       
     return result;
 }
