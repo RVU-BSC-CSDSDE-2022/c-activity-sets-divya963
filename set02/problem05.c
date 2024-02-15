@@ -23,18 +23,18 @@ float borga_X(int x)
 {
     float power = 1;
     float factorial = 1;
+    float term = 0;
     float sum = 1;
     int i =1;
     while(i>0)
     {
         //for(int j=1;j<=((2*i)+1);j++)//No need of for loop, compute factorial from previous term.
-        
-            factorial *= (i*2) * ((2*i) + 1);
-        
+        factorial *= (i*2) * ((2*i) + 1);
         power=power*x; 
-        if ((power/factorial)>0.000001)
+        term = power/factorial ;
+        if ((term)>0.000001)
         {
-            sum=sum+(power/factorial); 
+            sum=sum+(term); 
             i=i+1; // we need to get 5,7... in denominator
         }
         else
