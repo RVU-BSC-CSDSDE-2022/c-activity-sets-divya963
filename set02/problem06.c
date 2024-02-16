@@ -32,6 +32,10 @@ float odd_average(int n, int a[n])
 {
     int i;
     if(n % 2 == 0 ) // condition tells the element is even
+    for(i=0;i%2==0;i++)
+    {
+        
+    }
     
     //compare each element whether they are odd or not
 }
