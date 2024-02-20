@@ -30,7 +30,7 @@ float borga_X(int x)
     {
         //for(int j=1;j<=((2*i)+1);j++)//No need of for loop, compute factorial from previous term.
         factorial *= (i*2) * ((2*i) + 1);
-        power=power*x;   
+        power *= x;   
         term = power/factorial ; 
         sum += term;
         i=i+1; // we need to get 5,7... in denominator  
