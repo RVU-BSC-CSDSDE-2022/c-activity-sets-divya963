@@ -1,0 +1,13 @@
+
+Breakpoint 1, 0x00401463 in main ()
+(gdb) n
+Single stepping until exit from function main,
+which has no line number information.
+Enter the value of x : 5
+The borga value of 5 is : 1.000000 0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) 
+
