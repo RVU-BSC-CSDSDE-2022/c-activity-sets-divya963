@@ -21,7 +21,7 @@ int input(int x)
 }
 float borga_X(int x)
 {
-    float power = 1;
+   /* float power = 1;
     float factorial = 1;
     float term = 1;
     float sum = 1;
@@ -29,13 +29,32 @@ float borga_X(int x)
     while((term)>=0.000001)//get rid of if inside the while loop
     {
         //for(int j=1;j<=((2*i)+1);j++)//No need of for loop, compute factorial from previous term.
-        factorial *= (i*2) * ((2*i) + 1);
+        factorial *= ((i*2) * ((2*i) + 1));
         power *= x;   
-        term = power/factorial ; 
+        term = power/factorial;  
         sum += term;
         i=i+1; // we need to get 5,7... in denominator  
+        //Overflow happening. Due to less memory space.
     }
-    return sum;  
+    return sum;  */
+    //double power = 1;
+    //double factorial = 1;
+    float term = 1;
+    float sum = 1;
+    int i =1;
+    while((term)>=0.000001)//get rid of if inside the while loop
+    {
+        //for(int j=1;j<=((2*i)+1);j++)//No need of for loop, compute factorial from previous term.
+        //
+        //factorial *= ((i*2) * ((2*i) + 1));
+        //power *= x;   
+        term *= (float)x/((i*2) * ((2*i) + 1));  
+        sum += term;
+        i=i+1; // we need to get 5,7... in denominator  
+        //Overflow happening. Due to less memory space.
+    }
+    return sum;  //here its only adding sum + term not going to calculate the term value.
+
 }
 void output(int x, float result)
 {
