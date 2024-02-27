@@ -23,7 +23,7 @@ int input()
 int find_gcd(int a, int b)
 {
   int gcd;
-  for(int i=1;i<=a && i<=b;i++)
+  for(int i=1;i<=a && i<=b;i++)//remove and operator.
     {
       if(a%i==0 && b%i==0)
       {
