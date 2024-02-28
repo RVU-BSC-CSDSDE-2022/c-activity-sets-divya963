@@ -15,3 +15,5 @@ printf("The answer is %d",smallest);
 return 0;
 
 }
+
+

@@ -25,15 +25,16 @@ int find_gcd(int a, int b)
 {
   //compare a and b which is smaller
   int smallest,gcd;
-  if(a<b){
-    a = smallest;
+  if(a<b)
+  {
+    smallest = a;
   }
-    else
-    {
-    b = smallest;
+  else
+  {
+    smallest = b;
   }
   for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
-  reaches 10000 , need a break statement*/
+  reaches 10000*/
     {
       if(a%i==0 && b%i==0)
       {        

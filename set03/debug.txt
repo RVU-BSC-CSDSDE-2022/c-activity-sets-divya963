@@ -1,0 +1,90 @@
+Reading symbols from C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set03\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem05.c, line 9.
+(gdb) r
+Starting program: C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set03/a.exe 
+[New Thread 15296.0x2508]
+[New Thread 15296.0x13c8]
+
+Breakpoint 1, main () at problem05.c:9
+9         a=input();
+(gdb) n
+Enter a number:16
+10        b=input();
+(gdb) n
+Enter a number:12
+11        gcd=find_gcd(a,b);
+(gdb) s
+find_gcd (a=16, b=12) at problem05.c:28
+28        if(a<b){
+(gdb) s
+33          b = smallest;
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+40              gcd=i;
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+40              gcd=i;
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+40              gcd=i;
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+38            if(a%i==0 && b%i==0)
+(gdb) s
+35        for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+(gdb) s
+43        return gcd;
+(gdb) s
+44      }
+(gdb) s
+main () at problem05.c:12
+12        output(a,b,gcd);
+(gdb) s
+(gdb) s
+output (a=16, b=12, gcd=4) at problem05.c:47
+47        printf("The GCD of %d and %d is %d",a,b,gcd);
+(gdb) s
+The GCD of 16 and 12 is 448     (gdb) 
