@@ -21,14 +21,24 @@ int input()
   return n;
 }
 int find_gcd(int a, int b)
+/*find the smaller and then select the smaller in for loop*/
 {
-  int gcd;
-  for(int i=1;i<=b;i++)/*remove and operator.loop is not exiting*/
+  //compare a and b which is smaller
+  int smallest,gcd;
+  if(a<b){
+    a = smallest;
+  }
+    else
+    {
+    b = smallest;
+  }
+  for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
+  reaches 10000 , need a break statement*/
     {
       if(a%i==0 && b%i==0)
-      {
+      {        
         gcd=i;
-      }  
+      }    
     }
   return gcd;
 }
