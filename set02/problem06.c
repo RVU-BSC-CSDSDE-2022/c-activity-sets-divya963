@@ -30,14 +30,26 @@ void input(int n, int a[n])
 }
 float odd_average(int n, int a[n])
 {
-    int i;
-    if(n % 2 == 0 ) // condition tells the element is even
-    for(i=0;i%2==0;i++)
+    int j,new[j];
+    for(int i=0;i<n;i++)
     {
-        
+        if(a[i] % 2 == 1)
+        {
+            new[j] = a[i];
+            j++;
+        }
     }
-    
-    //compare each element whether they are odd or not
+    return new[j];
+    /*int sum,result,odd_array[n],j =0;
+    for(int i=0;i<=n;i++){
+        if(a[i] % 2 == 1){
+            odd_array[j] = a[i];
+            j++;
+        }
+            sum = sum + odd_array[n];
+            result = sum/j;
+        }
+    return result;*/
 }
 void output(float avg)
 {

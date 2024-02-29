@@ -37,18 +37,15 @@ float borga_X(int x)
         //Overflow happening. Due to less memory space.
     }
     return sum;  */
-    //double power = 1;
-    //double factorial = 1;
+    
     float term = 1;
     float sum = 1;
     int i =1;
     while((term)>=0.000001)//get rid of if inside the while loop
-    {
-        //for(int j=1;j<=((2*i)+1);j++)//No need of for loop, compute factorial from previous term.
-        //
-        //factorial *= ((i*2) * ((2*i) + 1));
-        //power *= x;   
-        term *= (float)x/((i*2) * ((2*i) + 1));  
+    { 
+        term *= (float)x/((i*2) * ((2*i) + 1)); /*while we are giving float it will help to 
+        calculate the entire floating point numbers here x and y boh are int so they are not taiking the 
+        floating point numbers */
         sum += term;
         i=i+1; // we need to get 5,7... in denominator  
         //Overflow happening. Due to less memory space.
