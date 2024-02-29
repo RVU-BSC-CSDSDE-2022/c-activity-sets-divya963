@@ -14,10 +14,15 @@ int main()
 
     for(int i=0;i<n;i++)
     { 
+        int arr1[n];
         if(arr[i]%2==1)
+        {
+            arr[i] = arr1[i];
+            i++;
+        }
         //int arr1[n];  //you cannot assign arrays directly. an increment operation is needed.
         //arr[i] = arr1[i];
-        printf("%d ", arr[i]);
+        printf("%d ", &arr1[n]);
+
     }  
-            
 }
