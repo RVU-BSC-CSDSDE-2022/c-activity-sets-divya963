@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 int main(){
     int n;
     printf("Enter the number of elements in an array");
@@ -16,6 +16,39 @@ int main(){
         }
     }
     return 0;
+    }*/
+
+    //create a new array to store the odd elements.
+
+    #include<stdio.h>
+
+    int main() {
+    int n;
+    printf("Enter the number of elements in an array: ");
+    scanf("%d", &n);
+    int a[n];
+    printf("Enter the elements in the array: ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
     
+    int arr[n]; // create a array to store odd elements 
+    int count = 0; // count the number of odd elements in the array after checking whether its odd or not
+    
+    for(int i = 0; i < n; i++) {
+        if(a[i] % 2 == 1) {
+            arr[count] = a[i]; // Assigning odd elements to oddArray
+            count++;
+        }
+    }
+    printf("The odd numbers in array are:\n");
+    for(int i = 0; i < count; i++) {
+        printf("%d\n", arr[i]);
+    }
+
+    return 0;
 }
+
+    
+
 
