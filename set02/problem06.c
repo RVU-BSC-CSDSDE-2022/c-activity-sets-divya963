@@ -26,7 +26,7 @@ void input(int n, int a[n])
     for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
-    }
+    } 
 }
 float odd_average(int n, int a[n])
 {
