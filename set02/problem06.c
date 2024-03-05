@@ -30,26 +30,23 @@ void input(int n, int a[n])
 }
 float odd_average(int n, int a[n])
 {
-    int j,new[j];
-    for(int i=0;i<n;i++)
-    {
-        if(a[i] % 2 == 1)
-        {
-            new[j] = a[i];
-            j++;
+    int arr[n];
+    int sum = 0;
+    int count = 0;
+    int avg =0;
+    
+    //printf("The odd numbers are\n");
+    for(int i=0;i<n;i++){
+        if(a[i]%2==1){
+            arr[i] = a[i];
+            count++ ;
+            //printf("%d\n",arr[i]);
+            sum = sum + arr[i];
+            avg = sum/count;
         }
-    }
-    return new[j];
-    /*int sum,result,odd_array[n],j =0;
-    for(int i=0;i<=n;i++){
-        if(a[i] % 2 == 1){
-            odd_array[j] = a[i];
-            j++;
-        }
-            sum = sum + odd_array[n];
-            result = sum/j;
-        }
-    return result;*/
+    } 
+    return avg;
+    
 }
 void output(float avg)
 {
