@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include<math.h>
 
-#define pi 3.14
+#define pi 3.1415
 
 typedef struct _camel {
     float radius, height, length, weight;
 } Camel;
+
 void input(int n, Camel c[n], float *truck_weight);
 void find_camel_weight(int n, Camel c[n]);
 float compute_total_weight(int n, Camel c[n], float truck_weight);
@@ -14,30 +15,52 @@ void output(float total_weight);
 int main()
 {
   int n;
-  float truck_weight,total_weight;
   Camel c[n];
+  float truck_weight,total_weight;
   input(n,c,&truck_weight);
-  find_camel_weight(n,c);
-  total_weight=compute_total_weight(n,c,truck_weight);
+  find_camel_weight(n, c);
+  total_weight = compute_total_weight(n, c,truck_weight);
   output(total_weight);
   return 0;
 }
 
 void input(int n, Camel c[n], float *truck_weight)
 {
-  printf("Enter the number of camels");
-  scanf("%d",&n);
-  for(int i=0;i<n;i++)
-    {
-      printf("Enter the height of camel %d",i + 1);
-      scanf("%f",&c[i].height);
-      printf("Enter the length of camel %d",i + 1);
-      scanf("%f",&c[i].length);
-      printf("Enter the radius of camel %d",i + 1);
-      scanf("%f",&c[i].radius);
-    }
   printf("Enter the weight of the truck");
-  scanf("%f",truck_weight);
+  scanf("%d",truck_weight);
+  printf("Enter the number of the camels");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+    printf("Enter the height of the camel");
+    scanf("%f",&c[i].height);
+    printf("Enter the radius of the camel");
+    scanf("%f",&c[i].length);
+    printf("Enter the length of the camel");
+    scanf("%f",&c[i].radius);
+  }
+}
+void find_camel_weight(int n, Camel c[n])
+{
+  c.weight_of_camel = pi * (pow(c.radius,3)) * sqrt(c.height * c.length);//for one camel
+}
+float compute_total_weight(int n, Camel c[n], float truck_weight)
+{
+  truck_weight = truck_weight + weight_of_camels;
+}
+void output(float total_weight)
+{
+
+}
+
+
+
+/*
+      printf("Enter the height of camel %d",i + 1);
+      printf("Enter the length of camel %d",i + 1);
+      printf("Enter the radius of camel %d",i + 1);
+      
+    }
 }
 void find_camel_weight(int n, Camel c[n])
 {
@@ -60,4 +83,4 @@ float compute_total_weight(int n, Camel c[n], float truck_weight)
 void output(float total_weight)
 {
   printf("The total weight of the truck is %f",total_weight);
-}
+}*/

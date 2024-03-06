@@ -64,6 +64,7 @@ The weight of the camel with radius: 1.0, height: 1.0, length: 1.0 is 3.1415
 > `weight = pi * stomach_radius^3 * sqrt(height * length)`
 
 ***Function Declarations***
+
 ```c
 struct camel {
 	float radius, height, length,weight;
