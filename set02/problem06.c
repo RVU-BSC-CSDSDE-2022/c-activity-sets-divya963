@@ -41,7 +41,7 @@ float odd_average(int n, int a[n])
             //arr[i] = a[i];//do it without another array arr[i] 
             count++ ;
             //printf("%d\n",arr[i]);
-            sum = sum + a[i];//sum we need to store the odd elements o it should be inside the if condition.
+            sum = sum + a[i];//sum we need to store the odd elements  it should be inside the if condition.
             //avg = sum/count;//how many times we are computing the average here ,count times
         }
     } 

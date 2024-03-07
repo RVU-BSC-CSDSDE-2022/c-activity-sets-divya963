@@ -20,9 +20,12 @@ void input(char *name)
 }
 int has_nice_name(char *c)
 {
-  int vowels = 0,constants =0;
-  for(int i=0; i<strlen(c); i++)
+  int vowels = 0,constants =0;//use while loop without strlen
+  //for(int i=0; i<strlen(c); i++)
+  int i=0;
+  while(i<strlen(c))
     {
+      i++;
       if(c[i] == 'a' || c[i] == 'e' || c[i] == 'i' || c[i] == 'o' || c[i] == 'u' || c[i] == 'A' || c[i] == 'E' || c[i] == 'I' || c[i] == 'O' || c[i] == 'U')
       {
         vowels++;
@@ -32,6 +35,7 @@ int has_nice_name(char *c)
         constants++;
       }
     }
+    
   if(vowels >= 2 && constants >= 2)
   {
     return 1;
@@ -40,10 +44,11 @@ int has_nice_name(char *c)
   {
     return 0;
   }
+    
 }
 void output(int res)
 {
-  if(res ==1)
+  if(res == 1)
   {
     printf("The camel is having a nice name");
   }

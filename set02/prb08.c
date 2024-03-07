@@ -19,11 +19,9 @@ int main(){
         scanf("%f",&c[i].length);
     }
     //to find the weight of one camel the equation is this.now find to get the weignt of n number of camels.
-    for(i=0;i<n;i++){ 
-        c.weight_of_camel = pi * (pow(c.radius,3)) * sqrt(c.height * c.length);
-        c.weightofcamel -> c.weight_of_camel;
-        printf("The weight of n number of camels is %f",c.weightofcamel);
-    }
+    
+        c.weight_of_camel = pi*(pow(c.radius,3))*sqrt(c.height*c.length);
+        printf("%f",c.weight_of_camel);
     
     
     return 0;
