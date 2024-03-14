@@ -30,12 +30,7 @@ int has_nice_name(char *c)
       {
         vowels++;
       }
-      else if(c[i] == 'B'||c[i] == 'C'||c[i] == 'D'||c[i] == 'F'||c[i] == 'G'||c[i] == 'H'||c[i] == 'J'||
-      c[i] == 'K'||c[i] == 'L'||c[i] == 'M'||c[i] == 'N'||c[i] == 'P'||c[i] == 'Q'||c[i] == 'R'||c[i] == 'S'
-      ||c[i] == 'T'||c[i] == 'V'||c[i] == 'W'||c[i] == 'X'||c[i] == 'Y'||c[i] == 'Z'||c[i] == 'b'||c[i] == 'c'
-      ||c[i] == 'd'||c[i] == 'f'||c[i] == 'g'||c[i] == 'h'||c[i] == 'j'||
-      c[i] == 'k'||c[i] == 'l'||c[i] == 'm'||c[i] == 'n'||c[i] == 'p'||c[i] == 'q'||c[i] == 'r'||c[i] == 's'
-      ||c[i] == 't'||c[i] == 'v'||c[i] == 'w'||c[i] == 'x'||c[i] == 'y'||c[i] == 'z')/*find the consonants in the alphabets ,A-Z and a-z,but why we need to check A-Z
+      else if((c[i] >= 'A' && c[i] <= 'Z') || (c[i] >= 'a' && c[i] <= 'z'))/*find the consonants in the alphabets ,A-Z and a-z,but why we need to check A-Z
       (aeiou is already checked)*/
       {
         consonants++;

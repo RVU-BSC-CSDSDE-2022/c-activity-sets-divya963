@@ -42,6 +42,10 @@ void input(int n, Camel c[n], float *truck_weight)
 }
 void find_camel_weight(int n, Camel c[n])
 {
+  for(i=0;i<n;i++)
+  {
+    c.weight
+  }
   c.weight_of_camel = pi * (pow(c.radius,3)) * sqrt(c.height * c.length);//for one camel
 }
 float compute_total_weight(int n, Camel c[n], float truck_weight)
@@ -84,3 +88,17 @@ void output(float total_weight)
 {
   printf("The total weight of the truck is %f",total_weight);
 }*/
+
+
+
+float compute_total_weight(int n, Camel c[n], float truck_weight) {
+    float total_weight = truck_weight;
+    for (int i = 0; i < n; i++) {
+        total_weight += c[i].weight;
+    }
+    return total_weight;
+}
+
+void output(float total_weight) {
+    printf("The Total weight of the truck is: %.6f\n", total_weight);
+}
