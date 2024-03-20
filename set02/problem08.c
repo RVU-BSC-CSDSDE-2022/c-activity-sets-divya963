@@ -7,7 +7,7 @@ typedef struct _camel {
 
 int input_no_of_camels();
 Camel input_camel();
-//void input_camels(int n,Camel c[n]);//want camel only.
+void input_camels(int n,Camel c[n]);//want camel only.
 void input_camels_truckweight(float *truck_weight);
 void find_camels_weight(int n, Camel c[n]);
 float compute_total_weight(int n, Camel c[n], float truck_weight);
@@ -17,6 +17,7 @@ int main()
 {
   int n;
   n = input_no_of_camels();
+  Camel c[n];
   Camel C;
   C = input_camel();
   float truck_weight;
@@ -51,7 +52,7 @@ Camel input_camel()
     }
 }
 
-/*void input_camels(int n,Camel c[n]) //what is the wrong with this.
+void input_camels(int n,Camel c[n]) //what is the wrong with this.
 {
     for(int i=0;i<n;i++)
   {
@@ -62,7 +63,7 @@ Camel input_camel()
     printf("Enter the length of the camel %d",i+1);
     scanf("%f",&c[i].radius);
   }
-}*/
+}
 
 void input_camels_truckweight(float *truck_weight)
 {
@@ -71,8 +72,6 @@ void input_camels_truckweight(float *truck_weight)
 }
 void find_camels_weight(int n, Camel c[n])
 {
-  float total_weight;
-   
   for(int i=0;i<n;i++)
   {
     c[i].weight = pi * (pow(c[i].radius,3)) * sqrt(c[i].height * c[i].length);
