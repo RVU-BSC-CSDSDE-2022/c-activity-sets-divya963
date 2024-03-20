@@ -1,22 +1,24 @@
 #include<stdio.h>
 #include<math.h>
-#define pi 3.1415 //macro
+#define pi 3.14 //macro
 typedef struct _camel {
     float radius, height, length, weight;
 } Camel;
 
 int input_no_of_camels();
-void input_camel(int n,Camel c[n]);
+Camel input_camel();
+//void input_camels(int n,Camel c[n]);//want camel only.
 void input_camels_truckweight(float *truck_weight);
 void find_camels_weight(int n, Camel c[n]);
 float compute_total_weight(int n, Camel c[n], float truck_weight);
 void output(float total_weight);
 
-int main(){
+int main()
+{
   int n;
   n = input_no_of_camels();
-  Camel c[n];
-  input_camel(n,c);
+  Camel C;
+  C = input_camel();
   float truck_weight;
   input_camels_truckweight(&truck_weight);
   find_camels_weight(n, c);
@@ -33,8 +35,23 @@ int input_no_of_camels()//input no of camels
   scanf("%d",&n);
   return n;
 }
+Camel input_camel()
+{
+    int n;
+    Camel C;
+    for(int i=0;i<n;i++)
+    {
+    printf("Enter the height of the camel %d");
+    scanf("%f",&C.height);
+    printf("Enter the radius of the camel %d");
+    scanf("%f",&C.length);
+    printf("Enter the length of the camel %d");
+    scanf("%f",&C.radius);
+    return C;
+    }
+}
 
-void input_camel(int n,Camel c[n])
+/*void input_camels(int n,Camel c[n]) //what is the wrong with this.
 {
     for(int i=0;i<n;i++)
   {
@@ -45,7 +62,7 @@ void input_camel(int n,Camel c[n])
     printf("Enter the length of the camel %d",i+1);
     scanf("%f",&c[i].radius);
   }
-}
+}*/
 
 void input_camels_truckweight(float *truck_weight)
 {
