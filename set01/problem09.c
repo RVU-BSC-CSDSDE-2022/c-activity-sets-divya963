@@ -30,6 +30,11 @@ float square_root(float n)
   } while((xn * xn - n) > 0.00001);
   return xn; 
 }
+/*for(x+1;x<;x++)
+if(a[x]!=0)
+break;
+FOR(J =2X;j<=n;j+=x)
+a[x]=0;*/
 void output(float n, float sqrroot)
 {
   printf("The square root %f is %f",n,sqrroot);

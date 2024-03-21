@@ -18,7 +18,6 @@ interpreted as a memory address and the value at that address is loaded*/
 {
   printf("Enter the number");
   scanf("%d%d%d",a,b,c);
-  return 0;
 
 }
 void compare(int a,int b,int c, int *largest)
