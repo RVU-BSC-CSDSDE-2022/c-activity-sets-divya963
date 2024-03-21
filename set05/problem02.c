@@ -13,10 +13,10 @@ typedef struct {
     int num, den;
 } Fraction;
 
-find the smallest of three fracions
-input the denominator and numerator of three numbers
-compare the three numbers
-(need to calculate the value of (1/3) num/den and that result need to be compared)
-print the result
+input function
+find the value of num/den
+comparison function
+output function
+
 
 
