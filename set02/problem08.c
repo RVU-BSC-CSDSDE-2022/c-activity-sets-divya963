@@ -40,11 +40,11 @@ Camel input_camel()
     Camel c;
     for(int i=0;i<n;i++)
     {
-    printf("Enter the height of the camel %d");
+    printf("Enter the height of the camel ");
     scanf("%f",&c.height);
-    printf("Enter the radius of the camel %d");
+    printf("Enter the radius of the camel ");
     scanf("%f",&c.length);
-    printf("Enter the length of the camel %d");
+    printf("Enter the length of the camel ");
     scanf("%f",&c.radius);
     return c;
     }
