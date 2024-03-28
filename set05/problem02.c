@@ -9,7 +9,7 @@ The smallest of 1/2, 1/3 and 1/4 is 1/4*/
 
 #include<stdio.h>
 
-typedef struct {
+typedef struct fraction{
     int num, den;
 } Fraction;
 
@@ -18,7 +18,9 @@ find value of num/den of 3 numbers and compare the answers to find the smallest
 n1/d1 = a1 
 n2/d2 = a2 
 n3/d2 = a3 
-then compare a1,a2,a3 then print the result
+then compare a1,a2,a3 
+Fraction fraction();
+void compare(int a1,int a2,int a3);
 void output(int *n1,int *d1,int *n2,int *d2,int *n3,int *d3,int n,int d);//numerator and denominator need to be printed
    
 int main()
