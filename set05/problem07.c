@@ -57,3 +57,10 @@ void output(Fraction f1, Fraction f2, Fraction sum)
 {
     printf("%d/%d + %d/%d = %d/%d",f1.num ,f1.den,f2.num,f2.den,sum.num,sum.den);
 }
+
+//if (denominator 1 and denominator 2 equal do addition else ?)
+//sum.num = f1.num + f2.num ;
+    //if the denominator is same no need to change it so it remains same
+    //need to reduce the fraction
+/*we don't need to make the denominators common just check if they are common or not
+if its common do the calculation else log out...?*/
