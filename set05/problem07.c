@@ -11,9 +11,11 @@ void output(Fraction f1, Fraction f2, Fraction sum);
 
 int main()
 {
-    Fraction f1,f2;
+    Fraction f1,f2,sum;
     f1 = input_fraction();
     f2 = input_fraction();
+    sum = add_fractions(f1, f2);
+    output(f1,f2,sum);
     return 0;
 }
 
@@ -24,20 +26,34 @@ Fraction input_fraction()
     scanf("%d %d",&f.num,&f.den);
     return f;
 }
-int find_gcd(int a, int b)/*we don't need to make the denominators common just check if they are common or not
-if its common do the calculation else ...?*/
-{
-    if (denominator 1 and denominator 2 equal do addition else ?)
+int find_gcd(int a, int b)
+{  
+    int result;
+    if (a % b == 0)
+    {
+        result = ((a < b) ? a : b); //find min of a and b
+         while (result > 0) { 
+        // Check if both a and b are divisible by result 
+        if (a % result == 0 && b % result == 0) { 
+            break; 
+        } 
+        result--; 
+    } 
+    // return gcd of a and b 
+    return result; 
+    } 
 }
 Fraction add_fractions(Fraction f1, Fraction f2)
 {
     Fraction sum;
-    sum.num = f1.num + f2.num ;
-    if the denominator is same no need to change it so it remains same
-    need to reduce the fraction
+    sum.num = f1.num * f2.den + f2.num * f1.den;
+    sum.den = f1.den * f2.den;
+    int gcd = find_gcd(sum.num, sum.den);
+    sum.num /= gcd;
+    sum.den /= gcd;
     return sum;
 }
 void output(Fraction f1, Fraction f2, Fraction sum)
 {
-    printf("%d/%d + %d/%d = %d/%d",f1.num ,f1.den,f2.num,f2.den,sum.num,sum.den)
+    printf("%d/%d + %d/%d = %d/%d",f1.num ,f1.den,f2.num,f2.den,sum.num,sum.den);
 }
