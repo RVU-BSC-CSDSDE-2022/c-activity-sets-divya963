@@ -1,0 +1,111 @@
+PS C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set05> gcc -g -O0 problem08.c
+PS C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set05> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.     
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>... 
+Reading symbols from C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set05\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401477: file problem08.c, line 17.
+(gdb) r
+Starting program: C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set05/a.exe 
+[New Thread 10184.0x12c]
+[New Thread 10184.0x1d68]
+
+Breakpoint 1, 0x00401477 in main () at problem08.c:17
+17      {
+(gdb) n
+19          n = input_n();
+(gdb) n
+Enter the number of fractions to be calculated:3
+20          Fraction f[n];
+(gdb) n
+21          input_n_fractions(n,f);
+(gdb) s
+input_n_fractions (n=3, f=0x61fed0) at problem08.c:44
+44          for (i=0;i<n;i++)
+(gdb) s
+46              f[i] = input_fraction();
+(gdb) s
+input_fraction () at problem08.c:37
+37          printf("Enter the numerator and denominator of the fraction");
+(gdb) n
+Enter the numerator and denominator of the fraction38       scanf("%d %d",&f.num,&f.den);
+(gdb) n
+s
+39          return f;
+(gdb) n
+40      }
+(gdb) n
+input_n_fractions (n=3, f=0x61fed0) at problem08.c:44
+44          for (i=0;i<n;i++)
+(gdb) n
+46              f[i] = input_fraction();
+(gdb) n
+Enter the numerator and denominator of the fraction44       for (i=0;i<n;i++)
+(gdb) n
+46              f[i] = input_fraction();
+(gdb) n
+Enter the numerator and denominator of the fraction44       for (i=0;i<n;i++)
+(gdb) n
+48      }
+(gdb) n
+main () at problem08.c:22
+22          Fraction sum = add_n_fractions(n,f);
+(gdb) n
+23          output(n,f,sum);
+(gdb) s
+output (n=3, f=0x61fed0, sum=...) at problem08.c:87
+87          printf("Sum :\n");
+(gdb) n
+Sum :
+88          for (int i = 0; i < n; ++i)
+(gdb) n
+90              printf("%d/%d", f[i].num, f[i].den);
+(gdb) n
+-1242341745/-291                if (i != n - 1)
+(gdb) n
+92                  printf(" + ");
+(gdb) n
+ + 88       for (int i = 0; i < n; ++i) 
+(gdb) n
+90              printf("%d/%d", f[i].num, f[i].den);
+(gdb) n
+-1242341745/-291                if (i != n - 1)
+(gdb) n
+92                  printf(" + ");
+(gdb) n
+ + 88       for (int i = 0; i < n; ++i) 
+(gdb) n
+90              printf("%d/%d", f[i].num, f[i].den);
+(gdb) n
+-1242341745/-291                if (i != n - 1)
+(gdb) n
+88          for (int i = 0; i < n; ++i) 
+(gdb) n
+94          printf(" = %d/%d\n", sum.num, sum.den);
+(gdb) n
+ = 1/0
+95      }(gdb) n
+main () at problem08.c:24
+24          return 0;
+(gdb) n
+25      }
+
+
+
+PS C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set05> gcc problem08.c
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file a.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+
+
+PS C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set05> gcc -g -O0 problem08.c
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file a.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+
+

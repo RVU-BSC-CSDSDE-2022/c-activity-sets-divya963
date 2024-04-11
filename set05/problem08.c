@@ -5,13 +5,13 @@ typedef struct fraction
     int num, den;
 } Fraction;
 
-int input_n();
-Fraction input_fraction();
-void input_n_fractions(int n, Fraction f[n]);
-int find_gcd(int a, int b);
-Fraction add_fractions(Fraction f1, Fraction f2);
+int input_n();//input n no of fractions.
+Fraction input_fraction();//input den and num of fraction
+void input_n_fractions(int n, Fraction f[n]);//input den and num of n no of fractions
+int find_gcd(int a, int b);//find the least common divisor
+Fraction add_fractions(Fraction f1, Fraction f2);//add fractions and pass to add function to get total.
 Fraction add_n_fractions(int n, Fraction f[n]);
-void output(int n, Fraction f[n], Fraction sum);
+void output(int n, Fraction f[n], Fraction sum);//print output
 
 int main()
 {
@@ -46,7 +46,7 @@ void input_n_fractions(int n, Fraction f[n])
         f[i] = input_fraction();
     }
 }
-int find_gcd(int a, int b)
+int find_gcd(int a, int b)// how ? completely blank now
 {
     int result;
     if (a % b == 0)
@@ -61,7 +61,7 @@ int find_gcd(int a, int b)
     } 
     // return gcd of a and b 
     return result; 
-    } 
+    }      
 }
 Fraction add_fractions(Fraction f1, Fraction f2)
 {
@@ -76,7 +76,7 @@ Fraction add_fractions(Fraction f1, Fraction f2)
 Fraction add_n_fractions(int n, Fraction f[n])
 {
     Fraction sum = f[0];
-    for(int i=0;i<n;i++)
+    for(int i=1;i<n;i++)
     {
         sum = add_fractions(sum,f[i]);
     }
@@ -84,7 +84,7 @@ Fraction add_n_fractions(int n, Fraction f[n])
 }
 void output(int n, Fraction f[n], Fraction sum)
 {
-    printf("Sum : \n");
+    printf("Sum :\n");
     for (int i = 0; i < n; ++i) 
     {
         printf("%d/%d", f[i].num, f[i].den);
