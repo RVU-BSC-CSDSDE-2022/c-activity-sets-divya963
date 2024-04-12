@@ -4,45 +4,51 @@ typedef struct fraction{
     int num, den;
 } Fraction;
 
-int input(int *n1,int *d1,int *n2,int *d2,int *n3,int *d3);
-Fraction smallestFraction(Fraction fractions[],int size);
-void output(int n1,int d1,int n2,int d2,int n3,int d3,int num,int den);//numerator and denominator need to be printed
+Fraction input();
+void input_fractions(Fraction fraction[]);
+Fraction smallestFraction(Fraction fraction[],int size);
+void output(int num,int den);//numerator and denominator need to be printed
    
 int main()
 {
     Fraction fraction[3];
-    int n1,n2,n3,d1,d2,d3,n,d;
-    input(&n1,&d1,&n2,&d2,&n3,&d3);
+    input_fractions(fraction);
     Fraction smallest = smallestFraction(fraction,3);
-    output(n1,d1,n2,d2,n3,d3,smallest.num,smallest.den);
+    output(smallest.num,smallest.den);
     return 0;
 }
-
-int input(int *n1,int *d1,int *n2,int *d2,int *n3,int *d3)
+Fraction input()
 {
-    printf("Enter the numerator and denominator of 1st fraction");
-    scanf("%d %d",&n1,&d1);
-    printf("Enter the numerator and denomenator of 2nd fraction");
-    scanf("%d",&n2,&d2);
-    printf("Enter the numerator and denomenator of 3rd fraction");
-    scanf("%d",&n3,&d3);
+  Fraction f;
+  printf("Enter numerator and denominator of triangle\n");
+  scanf("%d%d",&f.num,&f.den);
+  return f;
 }
 
-Fraction smallestFraction(Fraction fractions[],int size) {
-    Fraction smallest = fractions[0];
+void input_fractions(Fraction fraction[]) 
+{
+  for(int i=0;i<3;i++)
+    {
+      printf("Enter the details of triangle %d\n",i +1);
+      fraction[i]=input();
+    }
+}
+
+Fraction smallestFraction(Fraction fraction[],int size) {
+    Fraction smallest = fraction[0];
     for (int i = 1; i < size; i++) {
-        int product1 = smallest.num * fractions[i].den;
-        int product2 = fractions[i].num * smallest.den;
+        int product1 = smallest.num * fraction[i].den;
+        int product2 = fraction[i].num * smallest.den;
         if (product1 > product2) {
-            smallest = fractions[i];
+            smallest = fraction[i];
         }
     }
     return smallest;
 }
 
-void output(int n1,int d1,int n2,int d2,int n3,int d3,int num,int den)
+void output(int num,int den)
 {
-    printf("The smallest of %d/%d, %d/%d ,%d/%d is %d/%d",n1,d1,n2,d2,n3,d3,&num,&den);
+    printf("The smallest is %d/%d",num,den);
 }
 
 
