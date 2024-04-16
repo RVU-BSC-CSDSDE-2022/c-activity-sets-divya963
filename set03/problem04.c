@@ -5,6 +5,17 @@ void input_array(int n, int a[n]);
 int sum_composite_numbers(int n, int a[n]);
 void output(int sum);
 
+int main()
+{
+  int n,sum;
+  n=input_array_size();
+  int a[n];
+  input_array(n,a);
+  sum=sum_composite_numbers(n,a);
+  output(sum);
+  return 0;
+}
+
 int input_array_size()
 {
   int n;
@@ -44,14 +55,4 @@ int sum_composite_numbers(int n, int a[n])
 void output(int sum)
 {
   printf("The sum of composite numbers is %d",sum);
-}
-int main()
-{
-  int n,sum;
-  n=input_array_size();
-  int a[n];
-  input_array(n,a);
-  sum=sum_composite_numbers(n,a);
-  output(sum);
-  return 0;
 }

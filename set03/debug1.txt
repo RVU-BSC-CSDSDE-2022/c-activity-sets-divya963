@@ -1,0 +1,41 @@
+PS C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set03> gcc -g -O0 problem01.c
+PS C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set03> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.     
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>... 
+Reading symbols from C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set03\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4014dd: file problem01.c, line 19.
+(gdb) r
+Starting program: C:\Users\HOME\OneDrive\Desktop\C\c-activity-sets-divya963\set03/a.exe 
+[New Thread 1632.0xae0]
+[New Thread 1632.0x13d8]
+
+Breakpoint 1, main () at problem01.c:19
+19        input(&base,&height);
+(gdb) n
+enter the base and height of the triangle1 2
+20        find_area(base,height,&area);
+(gdb) s
+find_area (base=1, height=2, area=0x61ff14) at problem01.c:10
+10        *area = 0.5 * base * height; 
+(gdb) s
+11      }
+(gdb) s
+main () at problem01.c:21
+21        output(base,height,area);
+(gdb) s
+output (base=1, height=2, area=1) at problem01.c:14
+14        printf("The area of triangle is %f",area);
+(gdb) n
+The area of triangle is 1.00000015      }
+(gdb)
+ n
+main () at problem01.c:22
+22        return 0;

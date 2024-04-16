@@ -25,17 +25,6 @@ int find_gcd(int a, int b)
 {
   //compare a and b which is smaller
   int smallest,gcd;
-  /*if(a<b)
-  {
-    smallest = a;
-  }
-  else
-  {
-    smallest = b;
-  }*/
-  /*Use ternarry operator  can a number greater than n/2 which can divide n Ans -No, ,
-  Check till n/2 and  
-  square root*/
   smallest = (a>b)? a:b;
   for(int i=1;i<=smallest;i++)/*remove and operator.if we are giving a=2 and b=10000 loop is not exiting till it 
   reaches 10000*/
