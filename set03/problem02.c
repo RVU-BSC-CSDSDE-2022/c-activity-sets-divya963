@@ -26,7 +26,8 @@ float input_side()
 float check_scalene(float a, float b, float c)
 { //if we are using Floating numbers we need to set precision
    float p = 0.00001;//precision
-  if (((a - p) < b) && ((a + p) > b) && ((a - p) < c) && ((a + p) > c) && ((b - p) < c) && ((b + p) > c))
+  if (((a - p) < b) && ((a + p) > b) && ((a - p) < c) && ((a + p) > c) && ((b - p) < a) && ((b + p) > a)
+  &&((b - p) < c) && ((b + p) > c) && ((c - p) < a) && ((c + p) > a) && ((c - p) < b) && ((c + p) > b) )
   {
     return 1;
   }
