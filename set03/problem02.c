@@ -25,13 +25,15 @@ int input_side()
 }
 int check_scalene(float a, float b, float c)
 { //if we are using Floating numbers we need to set precision
-   int precision = 0.00001;
-  if (((a - precision) < b) && ((a + precision) > b) && ((a - precision) < c) && ((a + precision) > c)
-  ((b - precision) < c) && ((b + precision) > c))
+   int p = 0.00001;//precision
+  if (((a - p) < b) && ((a + p) > b) && ((a - p) < c) && ((a + p) > c) && ((b - p) < c) && ((b + p) > c))
   {
     return 1;
   }
-return 0;
+  else
+  {
+    return 0;
+  }
 }
 void output(float a, float b, float c, float isscalene)
 {
