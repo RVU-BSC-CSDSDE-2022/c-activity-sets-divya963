@@ -1,13 +1,13 @@
-
+//A triangles side can have both integer value or floating value. 
 #include<stdio.h>
 
 int input_side();
-int check_scalene(int a, int b, int c);
-void output(int a, int b, int c, int isscalene);
+int check_scalene(float a, float b, float c);
+void output(float a, float b, float c, float isscalene);
 
 int main()
 {
-  int a,b,c,isscalene;
+  float a,b,c,isscalene;
   a = input_side();
   b = input_side();
   c = input_side();
@@ -23,7 +23,7 @@ int input_side()
   scanf("%d",&n);
   return n;
 }
-int check_scalene(int a, int b, int c)
+int check_scalene(float a, float b, float c)
 {
   if(a!=b && b!=c && a!=c)
   {
@@ -31,7 +31,7 @@ int check_scalene(int a, int b, int c)
   }
 return 0;
 }
-void output(int a, int b, int c, int isscalene)
+void output(float a, float b, float c, float isscalene)
 {
   if(isscalene)
   {
