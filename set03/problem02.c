@@ -1,8 +1,8 @@
 //A triangles side can have both integer value or floating value. 
 #include<stdio.h>
 
-int input_side();
-int check_scalene(float a, float b, float c);
+float input_side();
+float check_scalene(float a, float b, float c);
 void output(float a, float b, float c, float isscalene);
 
 int main()
@@ -16,16 +16,16 @@ int main()
   return 0;
 }
 
-int input_side()
+float input_side()
 {
-  int n;
+  float n;
   printf("Enter the side of the triangle\n");
-  scanf("%d",&n);
+  scanf("%f",&n);
   return n;
 }
-int check_scalene(float a, float b, float c)
+float check_scalene(float a, float b, float c)
 { //if we are using Floating numbers we need to set precision
-   int p = 0.00001;//precision
+   float p = 0.00001;//precision
   if (((a - p) < b) && ((a + p) > b) && ((a - p) < c) && ((a + p) > c) && ((b - p) < c) && ((b + p) > c))
   {
     return 1;
