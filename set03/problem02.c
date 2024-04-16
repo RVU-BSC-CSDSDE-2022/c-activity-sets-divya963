@@ -24,8 +24,10 @@ int input_side()
   return n;
 }
 int check_scalene(float a, float b, float c)
-{
-  if(a!=b && b!=c && a!=c)
+{ //if we are using Floating numbers we need to set precision
+   int precision = 0.00001;
+  if (((a - precision) < b) && ((a + precision) > b) && ((a - precision) < c) && ((a + precision) > c)
+  ((b - precision) < c) && ((b + precision) > c))
   {
     return 1;
   }
