@@ -1,5 +1,6 @@
 //A triangles side can have both integer value or floating value. 
 #include<stdio.h>
+#define 
 
 float input_side();
 float check_scalene(float a, float b, float c);
@@ -24,17 +25,30 @@ float input_side()
   return n;
 }
 float check_scalene(float a, float b, float c)
-{ //if we are using Floating numbers we need to set precision
+{ 
+  
+  /*if(abs(a)!=abs(b) && abs(a)!=abs(c) && abs(b)!=abs(c))
+  {
+    return 1;
+  }
+  else 
+  {
+    return 0;
+  }*/
+  /*//if we are using Floating numbers we need to set precision
+//try it with fab funtion
    float p = 0.00001;//precision
-  if (((a - p) < b) && ((a + p) > b) && ((a - p) < c) && ((a + p) > c) && ((b - p) < a) && ((b + p) > a)
-  &&((b - p) < c) && ((b + p) > c) && ((c - p) < a) && ((c + p) > a) && ((c - p) < b) && ((c + p) > b) )
+   //make it readable
+   //use a macro function
+  if (((a - p) < (b)) && ((a + p) > b) != ((a - p) < c) && ((a + p) > c) != ((b - p) < a) && ((b + p) > a)
+  != ((b - p) < c) && ((b + p) > c) != ((c - p) < a) && ((c + p) > a) != ((c - p) < b) && ((c + p) > b) )
   {
     return 1;
   }
   else
   {
     return 0;
-  }
+  }*/
 }
 void output(float a, float b, float c, float isscalene)
 {
