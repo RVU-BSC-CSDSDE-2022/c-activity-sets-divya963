@@ -1,6 +1,7 @@
 //A triangles side can have both integer value or floating value. 
 #include<stdio.h>
-#define 
+#define p 0.00001
+#define ISS(a,b,c) (((a - p) < (b)) && ((a + p) > b) != ((a - p) < c) && ((a + p) > c) != ((b - p) < a) && ((b + p) > a) != ((b - p) < c) && ((b + p) > c) != ((c - p) < a) && ((c + p) > a) != ((c - p) < b) && ((c + p) > b))
 
 float input_side();
 float check_scalene(float a, float b, float c);
@@ -26,15 +27,15 @@ float input_side()
 }
 float check_scalene(float a, float b, float c)
 { 
-  
-  /*if(abs(a)!=abs(b) && abs(a)!=abs(c) && abs(b)!=abs(c))
+
+  if (ISS (a,b,c))
   {
     return 1;
   }
-  else 
+  else
   {
     return 0;
-  }*/
+  }
   /*//if we are using Floating numbers we need to set precision
 //try it with fab funtion
    float p = 0.00001;//precision
