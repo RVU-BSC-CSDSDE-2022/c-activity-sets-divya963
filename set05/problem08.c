@@ -61,7 +61,11 @@ int find_gcd(int a, int b)// how ? completely blank now
     } 
     // return gcd of a and b 
     return result; 
-    }      
+    }  
+    else 
+    {
+        return find_gcd(b, a % b);
+    }    
 }
 Fraction add_fractions(Fraction f1, Fraction f2)
 {

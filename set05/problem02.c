@@ -39,7 +39,7 @@ Fraction smallestFraction(Fraction fraction[])
     Fraction smallest = fraction[0];
     for (int i = 0; i < 3; i++)
     {
-        if (fraction[i].num * smallest.den < smallest.num * fraction[i].den) 
+        if (fraction[i].num * smallest.den < smallest.num * fraction[i].den) //numerators are common .
         {
             smallest = fraction[i];
         }
