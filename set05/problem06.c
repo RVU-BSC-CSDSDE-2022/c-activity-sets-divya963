@@ -36,7 +36,7 @@ int count_words(char *string)
 }
 void output(char *string, int no_words)
 {     
-    printf("The number of words in")
+    printf("The number of words in");
     puts(string);
     printf("is %d\n",no_words); //there is no memory space for string to print 
 }
