@@ -27,7 +27,9 @@ int count_words(char *string)
 {
     //char strtok(char string," ");
     int count = 0;
-    char *token = strtok(string, " ");
+    char string1[100];
+    strcpy(string1,string);
+    char *token = strtok(string1, " ");
     while (token != NULL) {
         count++;
         token = strtok(NULL, " ");
@@ -36,7 +38,7 @@ int count_words(char *string)
 }
 void output(char *string, int no_words)
 {     
-    printf("The number of words in");
-    puts(string);
-    printf("is %d\n",no_words); //there is no memory space for string to print 
+    printf("The number of words in %s is is %d\n",string,no_words);
+    //puts(string);
+    //printf("is %d\n",no_words); //there is no memory space for string to print 
 }
