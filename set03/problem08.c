@@ -71,7 +71,7 @@ Triangle find_smallest_triangle(int n, Triangle t[n])
 void output(int n, Triangle t[n], Triangle smallest)
 {
     {
-      printf("The smallest triangle out of triangles is %f and %f with area %f",smallest.base,smallest.altitude,smallest.area);
+      printf("The smallest triangle out of triangles is %f and %f with area %f\n",smallest.base,smallest.altitude,smallest.area);
     }
 
 }

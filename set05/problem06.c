@@ -12,9 +12,8 @@ int main()
    char a[100];
    input_string(a);
    int no_words;
-   char string;
-   no_words = count_words(&string);
-   output(&string,no_words);
+   no_words = count_words(a);
+   output(a,no_words);
    return 0; 
 }
 

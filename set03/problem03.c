@@ -15,7 +15,7 @@ int main()
 int input_number()
 {
   int n;
-  printf("enter the number");
+  printf("enter the number\n");
   scanf("%d",&n);
   return n;
 }
@@ -42,10 +42,10 @@ void output(int n, int result)
 {
   if(result==1)
   {
-    printf("the composite number is %d",n);
+    printf("the composite number is %d \n",n);
   }
   else
   {
-    printf("%d is not a composite number",n);
+    printf("%d is not a composite number \n",n);
   }
 }

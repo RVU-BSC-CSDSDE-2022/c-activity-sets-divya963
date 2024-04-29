@@ -16,7 +16,7 @@ int main()
 int input()
 {
   int n;
-  printf("Enter a number:");
+  printf("Enter a number:\n");
   scanf("%d",&n);
   return n;
 }
@@ -38,5 +38,5 @@ int find_gcd(int a, int b)
 }
 void output(int a,int b,int gcd)
 {
-  printf("The GCD of %d and %d is %d",a,b,gcd);
+  printf("The GCD of %d and %d is %d \n",a,b,gcd);
 }
