@@ -21,6 +21,7 @@ int input_number()
 }
 int is_composite(int n)
 {
+  // we can use square root of n also to find the composite number.
   int i,count=0;
   for(i=1;i<=n;i++)
     {

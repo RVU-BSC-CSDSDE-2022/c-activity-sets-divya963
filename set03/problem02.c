@@ -6,7 +6,9 @@
 //fabs(a-b)<p
 //#define ISS(a,b,c) (((a - p) < (b)) && ((a + p) > b) && ((a - p) < c) && ((a + p) > c) && ((b - p) < a) && ((b + p) > a) && ((b - p) < c) && ((b + p) > c) && ((c - p) < a) && ((c + p) > a) && ((c - p) < b) && ((c + p) > b))
 //#define ISS(a,b,c) ((fabs(a - p) < (b)) && (fabs(a + p) > b) && (fabs(a - p) < c) && (fabs(a + p) > c) && (fabs(b - p) < a) && (fabs(b + p) > a) && (fabs(b - p) < c) && (fabs(b + p) > c) && (fabs(c - p) < a) && (fabs(c + p) > a) && (fabs(c - p) < b) && (fabs(c + p) > b))
-#define ISS(a,b,c) (fabs(a-b)>p && fabs(a-c)>p && fabs(b-c)>p)
+#define ISS(a,b,c) (fabs(a-b)<p || fabs(a-c)<p || fabs(b-c)<p) //not getting result
+// || will return true if at least one pair of values has a difference less than p.
+// && will return true only if all pairs of values have differences less than p.
 float input_side();
 float check_scalene(float a, float b, float c);
 void output(float a, float b, float c, float isscalene);
@@ -32,7 +34,7 @@ float input_side()
 float check_scalene(float a, float b, float c)
 { 
 
-  if (ISS (a,b,c))
+  if (ISS(a,b,c))
   {
     return 1;
   }
@@ -59,7 +61,7 @@ void output(float a, float b, float c, float isscalene)
 {
   if(isscalene)
   {
-    printf("Not scalene");
+    printf("Not Scalene");
   }
   else
   {
