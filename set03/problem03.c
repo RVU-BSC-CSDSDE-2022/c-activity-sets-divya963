@@ -22,21 +22,21 @@ int input_number()
 int is_composite(int n)
 {
   // we can use square root of n also to find the composite number.
-  int i,count=0;
-  for(i=1;i<=n;i++)
+  int i,count=1;
+  for(i=2;count<2;i++)
     {
       if(n%i==0)
       {
         count++;
       }
     }
-  if(count>2)
+  if(i==n)
   {
-    return 1;
+    return 0;
   }
   else
   {
-    return 0;
+    return 1;
   }
 }
 void output(int n, int result)
